@@ -10,7 +10,7 @@
           <ul >
             <li><a href="index.html">Home</a></li>
             <li><a href="php/login.php">Sign In</a></li>
-            <li><a href="#features">Features</a></li>
+           
             <li><a href="#review">About Us</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Client</title>
+  <title>Sign Up</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -11,11 +11,11 @@
   	<?php include('errors.php'); ?>
   	<div class="input-group">
   	  <label>Username</label>
-  	  <input type="text" name="username" value="<?php echo $username; ?>">
+  	  <input type="text" name="username" value="">
   	</div>
   	<div class="input-group">
   	  <label>Email</label>
-  	  <input type="email" name="email" value="<?php echo $email; ?>">
+  	  <input type="email" name="email" value="">
   	</div>
   	<div class="input-group">
   	  <label>Password</label>
@@ -25,11 +25,7 @@
   	  <label>Confirm password</label>
   	  <input type="password" name="password_2">
   	</div>
-    <div class="input-group">
-      <label>User Type</label>
-      <input type="hidden" name="user_type" value="Client">
-      <input type="user_type" name="user_types" value="Client" readonly="readonly">
-    </div>
+    
   	<div class="input-group">
   	  <button type="submit" class="btn" name="reg_user">Register</button>
   	</div>
