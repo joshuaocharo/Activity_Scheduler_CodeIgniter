@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
     <head>
         <meta charset="utf-8">
@@ -57,4 +58,65 @@
                 </center>
         </div>
         </body>
+=======
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Sign up Page</title>
+        <meta name="TO-DO-LIST" content="TO-DO-LIST TO KEEP YOU UPDATED ON TASKS  YET TO BE EXECUTED">
+    </head>
+    <style>
+        /*form style*/
+        form{ align-items: center;
+            align-content: center; 
+            background-image: url("bg1.jpg"); 
+            background-repeat: repeat;
+            height: 800px;
+         }
+         form.button{
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+         }
+         body{
+            padding: 10px 50px 200px;
+            background-color: #add8e6;
+            background-size: 300px 300px;
+         }
+    </style>
+    
+    <body>
+
+       
+        
+           <center><h3>TO-DO-LIST</h3></center>
+            <center><p>On this day I want to:</p></center>
+            <center>
+            <form name = "activityscheduler" action = "act.php" method="POST" >
+            <fieldset>
+                <legend> TASKS </legend>
+            <label>taskName</label>    
+                <input type="text" name="taskName"><br>
+            <label>tStart:</label> 
+                <input type="date" name="tStart"><br>
+            <label>tEnd:</label>
+                <input type="date" name="tEnd"><br>
+            <label>PRIORITY:</label><br>
+                <input type="radio" name="tPriority" value="1">P1<br>
+                <input type="radio" name="tPriority" value="2">P2<br>
+                <input type="radio" name="tPriority" value="3">P3<br>
+                <input type="radio" name="tPriority" value="4">P4<br>
+                <button type="submit" class="submitbtn">Submit</button>
+                <button type="reset" class="cancelbtn">Cancel</button><br>
+            </fieldset>    
+            </form>
+                </center>
+        </div>
+        </body>
+>>>>>>> 228b078499597004d60f5583c1789d16eeebde02
 </html>
