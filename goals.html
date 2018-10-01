@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Activity Scheduler</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+	<style type="text/css">
+		*{ box-sizing: border-box;}
+		body, html{
+			height:100%;
+			margin:0;
+		}
+		.tab{
+			overflow:hidden;
+			background-color:#fee;
+		}
+		.tablinks{
+			background-color:inherit;
+			float:left;
+			border:none;
+			outline:none;
+			cursor:pointer;
+			padding:14px 16px;
+			transition:0.3s;
+			font-size:17px;
+			width:33%;
+		}
+		.tablinks:hover{
+			background-color:#ffc;
+		}
+		.tabcontent{
+			display:none;
+			padding:100px 20px;
+			border:1px solid #ccc;
+			height:100%;
+			border-top:none;
+		}
+		form{
+			align-content: center;
+			background-color:#fefefe;
+			margin:5px auto;
+			width:80%;
+			position:fixed;
+		}
+	</style>
+	<div class="header">
+		<div class="tab">
+		<button class="tablinks" onclick="openOption('Task',this,'white')" id="defaultOpen">Tasks</button>
+		<button class="tablinks" onclick="openOption('Exam',this,'white')">Exams</button>
+		<button class="tablinks" onclick="openOption('Goal',this,'white')">Goals</button>
+		</div>
+		<div id="Task" class="tabcontent">
+			<form name="addTask">
+			<input type="text" placeholder="Name" />
+			<input type="text" placeholder="Date" />
+			<input type="text" placeholder="Priority" />
+			<textarea placeholder="Notes" />
+			</form>
+		</div>
+		<div id="Exam" class="tabcontent">
+			<form name="addExam">
+			<input type="text" placeholder="Name/Subject" />
+			<input type="text" placeholder="Date" />
+			<input type="text" placeholder="Duration" />
+			<textarea placeholder="Notes" />
+			</form>
+		</div>
+		<div id="Goal" class="tabcontent">
+		<form name="addGoals">
+			<input type="text" placeholder="Title" />
+			<input type="text" placeholder="Category" />
+			<input type="text" placeholder="By" />
+			<textarea placeholder="Notes" />
+		</form>
+		</div>
+		<script type="text/javascript">
+			function openOption (pageName,elmnt,color){
+				var i, tabcontent, tablinks;
+				tabcontent=document.getElementsByClassName('tabcontent');
+				for(i=0; i<tabcontent.length; i++){
+					tabcontent[i].style.display="none";
+				}
+				tablinks=document.getElementsByClassName('tablinks');
+				for(i=0;i<tablinks.length;i++){
+					tablinks[i].style.backgroundColor=" ";
+				}
+				document.getElementsById(pageName).style.display="block";
+				elmnt.style.backgroundColor=color;
+				document.getElementById("defaultOpen").click();
+			}
+		</script>
+	</div>
+</body>
+</html>

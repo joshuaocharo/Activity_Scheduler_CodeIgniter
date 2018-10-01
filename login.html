@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Login</title>
+</head>
+<body>
+<div class= "logform">
+<form name="login" action="login.php">
+<div>
+	<img src="###" class="avatar">
+</div>
+<div class="container">
+<label for="uname"><b>Username</b></label>
+<input type="text" placeholder="Enter Username" name="uname" /required /><br>
+<label for="psw"><b>Password</b></label>
+<input type="text" placeholder="Password" /required /> <br>
+<button type="submit">Log In</button><br>
+<label><input type="checkbox" checked="checked" name="remember">Remember Me</label>
+</div>
+</form>
+<style type="text/css">
+.logform{
+	text-align: center;
+}
+.avatar{
+	vertical-align:middle;
+	width:50px;
+	height:50px;
+	border-radius:50%;
+}
+form{
+	align-content:center;
+	padding:60px;
+	margin:5px auto;
+	border:3px solid #f1f1f1;
+	width:80%;
+	background-color:#fefefe;
+	box-sizing: border-box;
+}
+input[type=text]{
+	padding:10px;
+	border:1px solid #ccc;
+	margin-top:20px;
+	margin-right:16px;
+	font-size:17px;
+	width:50%;
+}
+button{
+	padding:6px;
+	margin:20px;
+}
+</style>
+</div>
+</body>
+</html>

@@ -57,20 +57,22 @@ if (isset($_POST['reg_user'])) {
   			  VALUES('$username', '$email','$password')";
     if(mysqli_query($multi, $query) === true){
     echo "Records inserted successfully.";
-    header("Location: index.html");
+    //header("Location: welcome.html");
   } else{
     echo "ERROR: Could not able to execute $sql. " . $mysqli->error;
   }
-  	mysqli_query($multi, $query);
-  	$_SESSION['Username'] = $username;
+  //lEADS TO DOUBLE ENTRIES IN DB
+  	//mysqli_query($multi, $query);
+  	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
   }
 }
 
 // LOGIN USER
 if (isset($_POST['login_user'])) {
-  $username = mysqli_real_escape_string($multi, $_POST['Username']);
-  $password = mysqli_real_escape_string($multi, $_POST['Password']);
+  $username = mysqli_real_escape_string($multi, $_POST['username']);
+  $password = mysqli_real_escape_string($multi, $_POST['password']);
+
 
   if (empty($username)) {
     array_push($errors, "Username is required");
@@ -82,22 +84,24 @@ if (isset($_POST['login_user'])) {
   if (count($errors) == 0) {
     $password = md5($password);
     $query = "SELECT * FROM user WHERE Username='$username' AND Password='$password'";
-    $query1 = "SELECT * FROM user WHERE Username='$username' AND Password='$password' ";
-    $query2 = "SELECT * FROM user WHERE Username='$username' AND Password='$password' ";
+    //$query1 = "SELECT * FROM user WHERE Username='$username' AND Password='$password' ";
+    //$query2 = "SELECT * FROM user WHERE Username='$username' AND Password='$password' ";
     //$query3 = "SELECT * FROM users WHERE username='$username' AND password='$password' AND user_type= 'Personal Trainer'";
     $results = mysqli_query($multi, $query);
-    $results1 = mysqli_query($multi, $query1);
-    $results2 = mysqli_query($multi, $query2);
+    //$results1 = mysqli_query($multi, $query1);
+    //$results2 = mysqli_query($multi, $query2);
     //$results3 = mysqli_query($multi, $query3);
     if (mysqli_num_rows($results) == 1) {
-      $_SESSION['Username'] = $username;
+      header("Location: welcome.html");
+      $_SESSION['username'] = $username;
       $_SESSION['success'] = "You are now logged in";
+      
     }else {
       array_push($errors, "Wrong username/password combination");
     }
-      if (mysqli_num_rows($results1) == 1) { echo "Welcome"; header("Location: index.html"); }
+      /*if (mysqli_num_rows($results1) == 1) { echo "Welcome"; header("Location: index.html"); }
       elseif (mysqli_num_rows($results2) == 1) { echo "Welcome"; header("Location: index.html");}
-      else {echo "Welcome"; header("Location: index.html"); }
+      else {echo "Welcome"; header("Location: index.html"); }*/
   }
 }
 // LOG OUT USER
