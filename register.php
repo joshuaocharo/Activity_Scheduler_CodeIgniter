@@ -23,9 +23,6 @@ $_SESSION['message'] = "The two passwords do not match";
 
 }
 ?>
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
