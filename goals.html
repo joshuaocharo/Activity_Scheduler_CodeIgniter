@@ -105,9 +105,9 @@
 	</style>
 	<div class="header">
 		<div class="tab">
-		<button class="tablinks" onclick="openOption('Task',this,'white')" id="defaultOpen">Tasks</button>
-		<button class="tablinks" onclick="openOption('Exam',this,'white')">Exams</button>
-		<button class="tablinks" onclick="document.getElementById('Goal').style.display="block" ">Goals</button>
+		<button class="tablinks" onclick="document.getElementById('Task').style.display='block';document.getElementById('Exam').style.display='none';document.getElementById('Goal').style.display='none'" id="defaultOpen">Tasks</button>
+		<button class="tablinks" onclick="document.getElementById('Exam').style.display='block';document.getElementById('Task').style.display='none';document.getElementById('Goal').style.display='none'">Exams</button>
+		<button class="tablinks" onclick="document.getElementById('Goal').style.display='block';document.getElementById('Task').style.display='none';document.getElementById('Exam').style.display='none' ">Goals</button>
 		</div>
 		<div id="Task" class="tabcontent">
 			<form name="addTask">
@@ -139,22 +139,6 @@
 			<button type="submit" id="save">Save</button>
 		</form>
 		</div>
-		<script type="text/javascript">
-			function openOption (pageName,elmnt,color){
-				var i, tabcontent, tablinks;
-				tabcontent=document.getElementsByClassName('tabcontent');
-				for(i=0;i<tabcontent.length;i++){
-					tabcontent[i].style.display="block";
-				}
-				tablinks=document.getElementsByClassName('tablinks');
-				for(i=0;i<tablinks.length;i++){
-					tablinks[i].style.backgroundColor=" ";
-				}
-				document.getElementsById(pageName).style.display='block';
-				elmnt.style.backgroundColor=color;
-				document.getElementById("defaultOpen").click();
-			}
-		</script>
 	</div>
 </body>
 </html>
