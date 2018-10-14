@@ -11,10 +11,12 @@
 		body, html{
 			height:100%;
 			margin:0;
+			background-color:#fee;
 		}
 		.tab{
-			overflow:hidden;
+			overflow:auto;
 			background-color:#fee;
+			border:none;
 		}
 		.tablinks{
 			background-color:inherit;
@@ -27,70 +29,119 @@
 			font-size:17px;
 			width:33%;
 		}
+		.tablinks.active{
+			background-color: #ccc;
+		}
 		.tablinks:hover{
 			background-color:#ffc;
 		}
 		.tabcontent{
 			display:none;
-			padding:100px 20px;
+			padding:10px 12px;
 			border:1px solid #ccc;
 			height:100%;
 			border-top:none;
+			color:#fefefe;
 		}
+
 		form{
 			align-content: center;
-			background-color:#fefefe;
-			margin:5px auto;
+			background-color:inherit;
+			margin:40px auto;
 			width:80%;
-			position:fixed;
+		}
+		input[type=text], input[type=date]{
+			border:1px solid #ccc;
+			border-radius:4px;
+			font-size:17px;
+			margin-left:25px;
+			height:30px;
+			padding:3px;
+			margin-bottom: 5px;
+			margin-right: 25px;
+			width: 90%;
+		}
+		textarea{
+			border:0.5px solid #888;
+			height:150px; width: 90%;
+			margin-left: 25px;
+			margin-right: 25px;
+		}
+		#Task{
+			background-color: #ffe;
+			height:45%;
+			margin: 60px;
+			border: 1px solid #888;
+		}
+		#Exam{
+			background-color: #ffe;
+			height:45%;
+			margin: 60px;
+			border: 1px solid #888;
+		}
+		#Goal{
+			background-color: #ffe;
+			height:45%;
+			margin: 60px;
+			border: 1px solid #888;;
+		}
+		img{
+			height:30px;
+			width:30px;
+		}
+		#save, #cancelbtn{
+			margin-top: 17px;
+			margin-left: 15%;
+			background-color: inherit;
+			border: none;
+			font-size: 19px;
+			color: #88f;
+			outline: none;
+		}
+		#save:hover, #cancelbtn:hover{
+			color:#88e;
+			border-bottom: 1px solid #887;
 		}
 	</style>
 	<div class="header">
 		<div class="tab">
-		<button class="tablinks" onclick="openOption('Task',this,'white')" id="defaultOpen">Tasks</button>
-		<button class="tablinks" onclick="openOption('Exam',this,'white')">Exams</button>
-		<button class="tablinks" onclick="openOption('Goal',this,'white')">Goals</button>
+		<button class="tablinks" onclick="document.getElementById('Task').style.display='block';document.getElementById('Exam').style.display='none';document.getElementById('Goal').style.display='none'" id="defaultOpen">Tasks</button>
+		<button class="tablinks" onclick="document.getElementById('Exam').style.display='block';document.getElementById('Task').style.display='none';document.getElementById('Goal').style.display='none'">Exams</button>
+		<button class="tablinks" onclick="document.getElementById('Goal').style.display='block';document.getElementById('Task').style.display='none';document.getElementById('Exam').style.display='none' ">Goals</button>
 		</div>
 		<div id="Task" class="tabcontent">
 			<form name="addTask">
-			<input type="text" placeholder="Name" />
-			<input type="text" placeholder="Date" />
-			<input type="text" placeholder="Priority" />
-			<textarea placeholder="Notes" />
+			<h4 style="color: #888; text-align: center;font-size: 20px;">Tasks</h4>
+			<input type="text" placeholder="Name" name="tname"/><br>
+			<input type="date" placeholder="Date" /><br>
+			<input type="text" placeholder="Priority" /><br>
+			<textarea placeholder="Notes"></textarea><br>
+			<button type="submit" id="save">Save</button>
+			<button type="reset" id="cancelbtn">Cancel</button>
 			</form>
 		</div>
 		<div id="Exam" class="tabcontent">
 			<form name="addExam">
-			<input type="text" placeholder="Name/Subject" />
-			<input type="text" placeholder="Date" />
-			<input type="text" placeholder="Duration" />
-			<textarea placeholder="Notes" />
+				<h4 style="color: #888; text-align: center;font-size: 20px;">Exams</h4>
+			<input type="text" placeholder="Name/Subject" /><br>
+			<input type="date" placeholder="Date" /><br>
+			<input type="text" placeholder="Duration" /><br>
+			<textarea placeholder="Notes"></textarea><br>
+			<button type="submit" id="save">Save</button>
+			<button type="reset" id="cancelbtn">Cancel</button>
 			</form>
 		</div>
 		<div id="Goal" class="tabcontent">
 		<form name="addGoals">
-			<input type="text" placeholder="Title" />
-			<input type="text" placeholder="Category" />
-			<input type="text" placeholder="By" />
-			<textarea placeholder="Notes" />
+			<h4 style="color: #888; text-align: center;font-size: 20px;">Goals</h4>
+			<input type="text" placeholder="Title" /><br>
+			<input type="text" placeholder="Category" /><br>
+			<input type="date" placeholder="By" /><br>
+			<textarea placeholder="Notes"></textarea><br>
+			<button type="submit" id="save">Save</button>
+			<button type="reset" id="cancelbtn">Cancel</button>
 		</form>
 		</div>
-		<script type="text/javascript">
-			function openOption (pageName,elmnt,color){
-				var i, tabcontent, tablinks;
-				tabcontent=document.getElementsByClassName('tabcontent');
-				for(i=0; i<tabcontent.length; i++){
-					tabcontent[i].style.display="none";
-				}
-				tablinks=document.getElementsByClassName('tablinks');
-				for(i=0;i<tablinks.length;i++){
-					tablinks[i].style.backgroundColor=" ";
-				}
-				document.getElementsById(pageName).style.display="block";
-				elmnt.style.backgroundColor=color;
-				document.getElementById("defaultOpen").click();
-			}
-		</script>
 	</div>
 </body>
 </html>
