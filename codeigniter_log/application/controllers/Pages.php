@@ -16,9 +16,7 @@
 			$this->form_validation->set_rules('phone', 'Phone Number', 'required');
 
 			if($this->form_validation->run() === FALSE){
-				$this->load->view('templates/header');
-				$this->load->view('pages/login', $data);
-				$this->load->view('templates/footer');
+				$this->load->view('pages/login_page', $data);
 			}else{
 				$this->post_model->create_user();
 				redirect('pages/home');
