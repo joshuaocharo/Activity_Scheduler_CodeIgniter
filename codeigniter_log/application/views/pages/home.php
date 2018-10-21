@@ -75,21 +75,18 @@ li a.active {
             <!--<span><img class="img-responsive" src="images/dumbbell.svg" alt=""></span>-->
             <h3 align="center">Important Dates</h3>
             <p align="center">Mark important dates and never miss out on the big moments.</p>
-            <div> <p><a href="client_sign_up.php" class="" target="blank" align="center">GO<i class=""></i></a></p>
-          </div>
+            
             </div>
             <div class="module">
             <!--<span><img class="img-responsive" src="images/exercise.svg" alt=""></span>-->
             <h3 align="center">Goals</h3>
             <p align="center">Set new goals and we will help you achieve them.</p>
-            <div> <p><a href="<?php echo base_url();?>posts/create">GO</a></p>
-          </div>
+           
             </div>
             <!--<span><img class="img-responsive" src="images/yoga-carpet.svg" alt=""></span>-->
             <div class="module">
             <h3 align="center">To Do List</h3>
             <p align="center">Create a To Do list and keep your focus intact .</p>
-            <div> <p><a href="client_sign_up.php" class="" target="blank" align="center">GO<i class=""></i></a></p>
-          </div>
+           
           </div>
         </div>
