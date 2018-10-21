@@ -14,7 +14,7 @@
         <a class="mainNav" href="contact.html">Contact</a><br>
         <a id="addbtn" href="<?php echo base_url();?>posts/add2">Add</a>
         <a id="addbtn" href="<?php echo base_url();?>signup">Sign Up</a>
-        <a id="addbtn" href="<?php echo base_url();?>login">Log In</a>
+        <a id="addbtn" href="<?php echo base_url();?>login_page">Log In</a>
     </div>
     <style>
     	.navbar{
