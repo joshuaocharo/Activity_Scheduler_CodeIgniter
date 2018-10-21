@@ -30,13 +30,13 @@
 		    	</div>
 		    </div>
 			<?php
-				if($this->session->flashdata('error')){
+				/*if($this->session->flashdata('error')){
 					?>
 					<div class="alert alert-danger text-center" style="margin-top:20px;">
 						<?php echo $this->session->flashdata('error'); ?>
 					</div>
 					<?php
-				}
+				}*/
 			?>
 		</div>
 	</div>
