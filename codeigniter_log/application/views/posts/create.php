@@ -1,6 +1,8 @@
+<li class="nav-item"><a class="mainNav" href="<?php echo base_url();?>homel">Home</a></li>
 <h2><?= $title ?></h2>
 <?php echo validation_errors(); ?>
 <?php echo form_open('posts/create'); ?>
+
 	<div class="form-group">
 		<input type="text" class="form-control" placeholder="Goal" name="title"/>
 	</div>
