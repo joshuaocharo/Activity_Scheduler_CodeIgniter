@@ -82,7 +82,7 @@ li a.active {
             <!--<span><img class="img-responsive" src="images/exercise.svg" alt=""></span>-->
             <h3 align="center">Goals</h3>
             <p align="center">Set new goals and we will help you achieve them.</p>
-            <div> <p><a href="<?php echo base_url();?>posts/create_goal">GO</a></p>
+            <div> <p><a href="<?php echo base_url();?>posts/create">GO</a></p>
           </div>
             </div>
             <!--<span><img class="img-responsive" src="images/yoga-carpet.svg" alt=""></span>-->
