@@ -5,38 +5,21 @@
   <title>Welcome User</title>
   <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assets/css/bootstrap.css">
 </head>
 <body>
   <div class="container">
-  <div class="navbar">
-        <a class="mainNav" href="index.html">Home</a>
-        <a class="mainNav" href="aboutus.html">About Us</a>
-        <a class="mainNav" href="contact.html">Contact</a><br>
-        <a id="addbtn" href="<?php echo base_url();?>posts">List</a>
-        <a id="addbtn" href="<?php echo base_url();?>signup">Sign Up</a>
-        <a id="addbtn" href="<?php echo base_url();?>login_page">Log In</a>
+  <div class="navbar-header">
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a class="mainNav" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="mainNav" href="aboutus.html">About Us</a></li>
+        <li class="nav-item"><a class="mainNav" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="addbtn" href="<?php echo base_url();?>posts">List</a></li>
+        <li class="nav-item"><a id="addbtn" href="<?php echo base_url();?>signup">Sign Up</a></li>
+        <li class="nav-item"><a id="addbtn" href="<?php echo base_url();?>login_page">Log In</a></li>
+      <ul class="nav nav-pills">
     </div>
-    <style>
-      .navbar{
-        background-color: #ffe;
-        height:45px;
-      }
-    #addbtn{
-      float: right; 
-      text-decoration: none;
-      padding-right:20px;
-      color: #888;
-    }
-    .mainNav{
-        float:left;
-        font-size:17px;
-        text-decoration: none;
-        text-align: center;
-        padding:20px 16px;
-        display:block;
-        color: #00a;
-     }
-  </style>
+  </div>
     <style>
     body {
   padding: 10px 50px 200px;
@@ -99,7 +82,7 @@ li a.active {
             <!--<span><img class="img-responsive" src="images/exercise.svg" alt=""></span>-->
             <h3 align="center">Goals</h3>
             <p align="center">Set new goals and we will help you achieve them.</p>
-            <div> <p><a href="client_sign_up.php" class="" target="blank" align="center">GO<i class=""></i></a></p>
+            <div> <p><a href="<?php echo base_url();?>posts/create_goal">GO</a></p>
           </div>
             </div>
             <!--<span><img class="img-responsive" src="images/yoga-carpet.svg" alt=""></span>-->

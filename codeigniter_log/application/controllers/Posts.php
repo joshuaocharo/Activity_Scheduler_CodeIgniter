@@ -20,24 +20,20 @@
 		}
 
 		public function create(){
-			$data['title'] = "Add";
-			$this->form_validation->set_rules('title','title','required');
-			$this->form_validation->set_rules('priority','priority','required');
+			$data['title'] = 'Set Goal';
 
-			if($this->form_validation->run === FALSE){
-				$this->load->view('templates/add_header');
-				$this ->load->view('posts/addtask', $data);
-				$this ->load->view('templates/add_footer');
+			$this->form_validation->set_rules('title', 'title', 'required');
+			$this->form_validation->set_rules('date', 'date', 'required');
+			$this->form_validation->set_rules('description', 'description', 'required');
 
-			}else{
-				$this->Task_model->add_task();
+			if($this->form_validation->run() === FALSE){
+				$this->load->view('templates/add_header'); 
+				$this->load->view('posts/create',$data);
+				$this->load->view('templates/add_footer');
+			} else{
+				$this->task_model->create();
 				redirect('posts');
 			}
-		}
-		
-		public function delete($id){
-			$this->Task_model->delete_task($id);
-			redirect('posts');
 		}
 
 		public function edit($slug){
@@ -47,9 +43,9 @@
 		}
 
 		$data['title'] = $data['tasks']['title'];
-			$this -> load ->views('templates/add_header'); 
-			$this -> load ->views('posts/edit', $data);
-			$this -> load ->views('templates/add_footer');
+			$this -> load ->view('templates/add_header'); 
+			$this -> load ->view('posts/edit', $data);
+			$this -> load ->view('templates/add_footer');
 		}
 
 		public function update(){
