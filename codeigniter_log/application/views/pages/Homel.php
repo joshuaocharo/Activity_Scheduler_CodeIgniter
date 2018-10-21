@@ -11,9 +11,10 @@
   <div class="container">
   <div class="navbar-header">
     <ul class="nav nav-pills">
-        <li class="nav-item"><a class="mainNav" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="mainNav" href="aboutus.html">About Us</a></li>
-        <li class="nav-item"><a class="mainNav" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="mainNav" href="home">Home</a></li>
+        <li class="nav-item"><a class="mainNav" href="aboutus">About Us</a></li>
+        <li class="nav-item"><a class="mainNav" href="contact">Contact</a></li>
+        <li class="nav-item"><a class="mainNav" href="home">Log Out</a></li>
         <li class="nav-item"><a class="addbtn" href="<?php echo base_url();?>posts">List</a></li>
         
       <ul class="nav nav-pills">
