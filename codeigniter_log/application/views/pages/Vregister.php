@@ -9,7 +9,7 @@
 <tr>
 	<td>
 	Password<td><?=form_password(array("name"=>"password"))?>
-	<td><?form_error("username")?>	
+	<td><?form_error("password")?>	
 	</td>
 </tr>
 <tr>
@@ -20,7 +20,7 @@
 </tr>
 <tr>
 	<td>
-		<?= form_submit(array("name"=>"submit","value"=>"Register"))?>
+		<?=form_submit(array("name"=>"submit","value"=>"Register"))?>
 	</td>
 </tr>
 </table>
