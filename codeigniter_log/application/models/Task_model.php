@@ -25,12 +25,12 @@
 			return $this->db->insert('tasks',$data);
 		}
 
-		public function delete_post($id){
+		public function delete_task($id){
 			$this->db->where('id', $id);
 			$this->db->delete('tasks');
 			return true;
 		}
-		public function update_post(){
+		public function update_task(){
 			$slug=url_title($this->input->post('title'));
 
 			$data= array('title' ->input->post('title'),

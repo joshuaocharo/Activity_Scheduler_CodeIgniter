@@ -3,9 +3,9 @@
 		public function index(){
 			$data['title'] = 'List';
 			$data['tasks'] = $this->task_model->get_tasks();
-			$this->load->view('templates/header');
+			$this->load->view('templates/add_header');
 			$this->load->view('posts/index', $data);
-			$this->load->view('templates/footer');
+			$this->load->view('templates/add_footer');
 		}
 
 		public function view($slug = NULL){
@@ -14,9 +14,9 @@
 				show_404();
 			}
 			$data['title'] = $data['task']['title'];
-			$this->load->view('templates/header');
+			$this->load->view('templates/add_header');
 			$this->load->view('posts/view', $data);
-			$this->load->view('templates/footer');
+			$this->load->view('templates/add_footer');
 		}
 
 		public function create(){
@@ -25,15 +25,16 @@
 			$this->form_validation->set_rules('priority','priority','required');
 
 			if($this->form_validation->run === FALSE){
-				$this ->load->view('posts/add', $data);
-				$this ->load->view('templates/footer');
+				$this->load->view('templates/add_header');
+				$this ->load->view('posts/addtask', $data);
+				$this ->load->view('templates/add_footer');
 
 			}else{
 				$this->Task_model->add_task();
 				redirect('posts');
 			}
 		}
-
+		
 		public function delete($id){
 			$this->Task_model->delete_task($id);
 			redirect('posts');

@@ -5,14 +5,17 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.css">
 </head>
 <body>
-	<div class="header">
-		<div class="tab">
+	<div class="container" style="width: 100%;">
+	<div class="navbar-header">
+		<div class="nav navbar-nav">
 		<a class="tablinks" id="defaultOpen"href="<?php echo base_url();?>posts/addtask">Tasks</a>
-		<button class="tablinks" onclick="document.getElementById('Exam').style.display='block';document.getElementById('Task').style.display='none';document.getElementById('Goal').style.display='none'">Exams</button>
-		<button class="tablinks" onclick="document.getElementById('Goal').style.display='block';document.getElementById('Task').style.display='none';document.getElementById('Exam').style.display='none' ">Goals</button>
+		<a class="tablinks" href="<?php echo base_url();?>posts/addidate">Important Dates</a>
+		<a class="tablinks" href="<?php echo base_url();?>posts/addgoal">Goals</a>
 		</div>
+	</div>
 	</div>
 	<div class="container">
 		

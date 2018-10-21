@@ -13,9 +13,6 @@
 
 		public function login(){
 			$data['title'] = 'Log In';
-			$data['counties'] = $this->post_model->get_counties();
-			$data['subcounties'] = $this->post_model->get_subcounties();
-
 			$this->form_validation->set_rules('uname', 'Name', 'required');
 			$this->form_validation->set_rules('passw', 'Password', 'required');
 			$this->form_validation->set_rules('phone', 'Phone Number', 'required');
