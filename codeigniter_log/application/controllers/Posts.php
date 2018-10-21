@@ -47,9 +47,9 @@
 		}
 
 		$data['title'] = $data['tasks']['title'];
-			$this -> load ->views('templates/header'); 
+			$this -> load ->views('templates/add_header'); 
 			$this -> load ->views('posts/edit', $data);
-			$this -> load ->views('templates/footer');
+			$this -> load ->views('templates/add_footer');
 		}
 
 		public function update(){

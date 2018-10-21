@@ -8,13 +8,14 @@
 <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.css">
 </head>
 <body>
+	<div class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<div class="container" style="width: 100%;">
-	<div class="navbar-header">
-		<div class="nav navbar-nav">
-		<a class="tablinks" id="defaultOpen"href="<?php echo base_url();?>posts/addtask">Tasks</a>
-		<a class="tablinks" href="<?php echo base_url();?>posts/addidate">Important Dates</a>
-		<a class="tablinks" href="<?php echo base_url();?>posts/addgoal">Goals</a>
-		</div>
+		<ul class="nav nav-pills">
+		<li class="nav-item"><a class="nav-link" id="defaultOpen"href="<?php echo base_url();?>posts/addtask">Tasks</a></li>
+		<li class="nav-item
+		"><a class="nav-link" href="<?php echo base_url();?>posts/addidate">Important Dates</a></li>
+		<li class="nav-item"><a class="nav-link" href="<?php echo base_url();?>posts/addgoal">Goals</a></li>
+		</ul>
 	</div>
 	</div>
 	<div class="container">

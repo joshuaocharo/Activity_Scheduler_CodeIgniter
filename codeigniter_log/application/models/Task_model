@@ -1,0 +1,15 @@
+<?php
+	class Task_model extends CI_Model{
+		public function __construct(){
+			$activity= $this->load->database('dbactivity', TRUE);
+		}
+		public function get_tasks($slug = FALSE){
+			$activity= $this->load->database('dbactivity', TRUE);
+			if($slug === FALSE){
+				$query= $activity->get('tasks');
+				return $query->result_array();
+			}
+			$query = $activity->get_where('tasks', array('slug'=> $slug));
+			return $query->row_array();
+		}
+	}
