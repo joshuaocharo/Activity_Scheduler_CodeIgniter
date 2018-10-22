@@ -14,9 +14,9 @@
 	<?php echo $task['priority_id'] ?>
 	</div>
 	<div class="colspan-md-3" style="margin-right: 40px;">
-	<p><a class="btn btn-default" href="<?php 
-	 		$segments = array('posts', $task['slug']);
-	 		echo site_url($segments); ?>">Delete</a></p>
+	<?php echo form_open('/posts/delete/'.$task['id']); ?>
+	<input type="submit" value="Delete">
+	</form>
 	</div>
 	</div>
 <?php endforeach; ?>

@@ -1,22 +1,14 @@
 <?php
-
 /**
  * 
  */
 class Register extends CI_Controller
 {
-	
-	function __construct(){
-		parent::__construct();
-		$this->load->helper('url');
-		
-	}
 	public function index(argument)
 	{
 		//Validation
 		$rules= array(
 			"email" =>array(
-		
 		"field"=>"email",
 	    "label"=>"Email",
         "rules" =>"required|valid_email|callback_email_is_taken"
@@ -38,7 +30,7 @@ class Register extends CI_Controller
 		$this->form_validation->set_rules($rules);
 
 		//checks to see if form was submitted
-		if ($this-> form_validation->run() !=true) {
+		if ($this-> form_validation->run() === FALSE) {
 			$this->load->view("vregister");// display register page
 		}else{
 			$form = array();
