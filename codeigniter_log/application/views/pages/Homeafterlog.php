@@ -73,7 +73,7 @@ li a.active {
             <!--<span><img class="img-responsive" src="images/dumbbell.svg" alt=""></span>-->
             <h3 align="center">Important Dates</h3>
             <p align="center">Mark important dates and never miss out on the big moments.</p>
-            <div> <p><a href="client_sign_up.php" class="" target="blank" align="center">GO<i class=""></i></a></p>
+            <div> <p><a href="<?php echo base_url();?>idates" class="" target="blank" align="center">GO<i class=""></i></a></p>
           </div>
             </div>
             <div class="module">
@@ -87,7 +87,7 @@ li a.active {
             <div class="module">
             <h3 align="center">To Do List</h3>
             <p align="center">Create a To Do list and keep your focus intact .</p>
-            <div> <p><a href="<?php echo base_url();?>todolist">GO</a></p>
+            <div> <p><a href="<?php echo base_url();?>posts">GO</a></p>
           </div>
           </div>
         </div>

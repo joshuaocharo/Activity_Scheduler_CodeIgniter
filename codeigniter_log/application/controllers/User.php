@@ -33,11 +33,8 @@ class User extends CI_Controller {
 
 		if($data){
 			$this->session->set_userdata('user', $data);
-<<<<<<< HEAD
-			redirect('home');
-=======
 			redirect('homeafterlog');
->>>>>>> 1593d6e143d4aa91cf19e494d7e5f80eab6e65e3
+
 		}
 		else{
 			header('location:'.base_url().$this->index());

@@ -47,7 +47,7 @@ class Register extends CI_Controller
 			}
 		}
 	}
-	public function username_is_taken($input){
+	/* public function username_is_taken($input){
 		$query ="SELECT * FROM 'users' WHERE 'fname'=?";
 		$arg= array($input);
 		$exec = $this->db->query($query,$arg) or die(mysql_error());
@@ -90,6 +90,6 @@ class Register extends CI_Controller
 	public function protect( $str){
 		return mysql_real_escape_string($str);
 	}
-}
+}*/
 
 ?>

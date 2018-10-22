@@ -10,10 +10,11 @@
 <body>
 	<div class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<div class="container" style="width: 100%;">
+		<li class="nav-item"><a class="mainNav" href="<?php echo base_url();?>homeafterlog">Home</a></li>
 		<ul class="nav nav-pills">
 		<li class="nav-item"><a class="nav-link" id="defaultOpen"href="<?php echo base_url();?>posts">Tasks</a></li>
 		<li class="nav-item
-		"><a class="nav-link" href="<?php echo base_url();?>posts/addidate">Important Dates</a></li>
+		"><a class="nav-link" href="<?php echo base_url();?>idates">Important Dates</a></li>
 		<li class="nav-item"><a class="nav-link" href="<?php echo base_url();?>goals">Goals</a></li>
 		</ul>
 	</div>

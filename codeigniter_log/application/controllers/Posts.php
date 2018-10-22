@@ -25,7 +25,7 @@
 
 			$this->form_validation->set_rules('title', 'title', 'required');
 			$this->form_validation->set_rules('date', 'date', 'required');
-			$this->form_validation->set_rules('description', 'description', 'required');
+			
 
 			if($this->form_validation->run() === FALSE){
 				$this->load->view('templates/add_header'); 

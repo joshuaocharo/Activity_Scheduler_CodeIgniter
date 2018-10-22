@@ -1,5 +1,5 @@
 <?php
-	class Goals extends CI_Controller{
+	class Idates extends CI_Controller{
 		public function index(){
 			$data['title'] = 'Important Events';
 

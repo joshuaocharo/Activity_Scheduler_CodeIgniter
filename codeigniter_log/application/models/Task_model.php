@@ -16,11 +16,11 @@
 			$activity= $this->load->database('dbactivity', TRUE);
 			$data = array(
 				'title'=> $this->input->post('title'),
-				'complete_by'=> $this->input->post('date'),
+				'date'=> $this->input->post('date'),
 				'priority_id' => $this->input->post('priority_id'),
-				'description'=> $this->input->post('description')
+				
 			);
-			$query= $activity->insert('goals', $data);
+			$query= $activity->insert('tasks', $data);
 			return $query;
 		}
 		public function delete_post($id){
