@@ -20,7 +20,8 @@
 		}
 
 		public function create(){
-			$data['title'] = 'Set Goal';
+			$data['title'] = 'Add Task';
+			$data['priorities'] = $this->task_model->get_priorities();
 
 			$this->form_validation->set_rules('title', 'title', 'required');
 			$this->form_validation->set_rules('date', 'date', 'required');
@@ -36,20 +37,8 @@
 			}
 		}
 
-		public function edit($slug){
-			$data['tasks'] = $this-> Task_model -> get_tasks($slug);
-		if(empty($data['tasks'])){
-				show_404();
-		}
-
-		$data['title'] = $data['tasks']['title'];
-			$this -> load ->view('templates/add_header'); 
-			$this -> load ->view('posts/edit', $data);
-			$this -> load ->view('templates/add_footer');
-		}
-
-		public function update(){
-			$this->Task_model->update_post();
+		public function delete($id){
+			$this->task_model->delete_post($id);
 			redirect('posts');
 		}
 	}

@@ -12,7 +12,9 @@
 		public function create(){
 			$data['title'] = 'Set Goals';
 
-			$this->form_validation->set_rules('name', 'name', 'required');
+			$this->form_validation->set_rules('title', 'title', 'required');
+			$this->form_validation->set_rules('date', 'date', 'required');
+			$this->form_validation->set_rules('description', 'description', 'required');
 
 			if($this->form_validation->run() === FALSE){
 				$this->load->view('templates/add_header');
@@ -30,5 +32,9 @@
 			$this->load->view('templates/header');
 			$this->load->view('posts/index', $data);
 			$this->load->view('templates/footer');
+		}
+		public function delete($goal_id){
+			$this->goal_model->delete_post($goal_id);
+			redirect('goals');
 		}
 	}

@@ -14,7 +14,7 @@
 		<li class="nav-item"><a class="nav-link" id="defaultOpen"href="<?php echo base_url();?>posts/addtask">Tasks</a></li>
 		<li class="nav-item
 		"><a class="nav-link" href="<?php echo base_url();?>posts/addidate">Important Dates</a></li>
-		<li class="nav-item"><a class="nav-link" href="<?php echo base_url();?>posts/create_goal">Goals</a></li>
+		<li class="nav-item"><a class="nav-link" href="<?php echo base_url();?>goals/create">Goals</a></li>
 		</ul>
 	</div>
 	</div>

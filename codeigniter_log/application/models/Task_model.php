@@ -17,9 +17,22 @@
 			$data = array(
 				'title'=> $this->input->post('title'),
 				'complete_by'=> $this->input->post('date'),
+				'priority_id' => $this->input->post('priority_id'),
 				'description'=> $this->input->post('description')
 			);
 			$query= $activity->insert('goals', $data);
 			return $query;
+		}
+		public function delete_post($id){
+			$activity= $this->load->database('dbactivity', TRUE);
+			$activity->where('id', $id);
+			$activity->delete('tasks');
+			return true;
+		}
+		public function get_priorities(){
+			$activity= $this->load->database('dbactivity', TRUE);
+			$activity->order_by('level');
+			$query = $activity->get('priorities');
+			return $query->result_array();
 		}
 	}
