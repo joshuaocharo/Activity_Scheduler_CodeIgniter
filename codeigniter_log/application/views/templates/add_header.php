@@ -11,10 +11,10 @@
 	<div class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<div class="container" style="width: 100%;">
 		<ul class="nav nav-pills">
-		<li class="nav-item"><a class="nav-link" id="defaultOpen"href="<?php echo base_url();?>posts/addtask">Tasks</a></li>
+		<li class="nav-item"><a class="nav-link" id="defaultOpen"href="<?php echo base_url();?>posts">Tasks</a></li>
 		<li class="nav-item
 		"><a class="nav-link" href="<?php echo base_url();?>posts/addidate">Important Dates</a></li>
-		<li class="nav-item"><a class="nav-link" href="<?php echo base_url();?>goals/create">Goals</a></li>
+		<li class="nav-item"><a class="nav-link" href="<?php echo base_url();?>goals">Goals</a></li>
 		</ul>
 	</div>
 	</div>

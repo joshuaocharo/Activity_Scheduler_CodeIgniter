@@ -1,4 +1,5 @@
 <h2><?= $title ?></h2>
+<li class="nav-item"><a class="nav-link" href="<?php echo base_url();?>posts/create">Add Tasks</a></li>
 <?php foreach ($tasks as $task): ?> 
 	<div class="row">
 	<div class="colspan-md-3" style="margin-right: 40px;">
