@@ -49,7 +49,7 @@ class Register extends CI_Controller
 			if (self::createUser($form['email'],$form['password'],$form['username'])== true) {
 			// created user succesfully
 				$data['username']= $form['username'];
-				$this->load->view("homel",$data);
+				$this->load->view("home",$data);
 			}else{
              echo "Not successful";        
 			}
