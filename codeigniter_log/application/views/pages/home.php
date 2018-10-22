@@ -15,7 +15,7 @@
         <li class="nav-item"><a class="mainNav" href="<?php echo base_url();?>aboutus">About Us</a></li>
         <li class="nav-item"><a class="mainNav" href="<?php echo base_url();?>contact">Contact</a></li>
         <li class="nav-item"><a class="addbtn" href="<?php echo base_url();?>posts">List</a></li>
-        <li class="nav-item"><a id="addbtn" href="<?php echo base_url();?>signup">Sign Up</a></li>
+        <li class="nav-item"><a id="addbtn" href="<?php echo base_url();?>vregister">Sign Up</a></li>
         <li class="nav-item"><a id="addbtn" href="<?php echo base_url();?>login_page">Log In</a></li>
       <ul class="nav nav-pills">
     </div>
